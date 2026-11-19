@@ -1,0 +1,61 @@
+{
+  "name": "kk-deep-factory",
+  "version": "0.3.0",
+  "type": "module",
+  "main": "./app/integration/index.js",
+  "exports": {
+    ".": "./app/integration/index.js",
+    "./client": "./app/integration/client.js",
+    "./package.json": "./package.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "app/integration",
+    "app/dist",
+    "app/backend",
+    "contracts",
+    "THIRD-PARTY-NOTICES",
+    "README.md",
+    "cordis.patch.yml",
+    "icon.svg"
+  ],
+  "peerDependencies": {
+    "@deepseek-ai/dsh-llm": ">=0.2.2-alpha.2 <0.2.3-0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "external": [
+        "react"
+      ],
+      "inject": [
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ]
+    }
+  },
+  "description": "三维车间、设备效率分析，以及由工厂总管协调的维修工单协作。",
+  "keywords": [
+    "dsh-plugin",
+    "manufacturing",
+    "equipment-management",
+    "OEE",
+    "work-orders"
+  ],
+  "license": "UNLICENSED",
+  "icon": "./icon.svg",
+  "engines": {
+    "node": ">=24.9.0",
+    "dsh": ">=0.2.2-alpha.2 <0.2.3-0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kbr19930409/kk-deep-factory.git"
+  },
+  "homepage": "https://github.com/kbr19930409/kk-deep-factory"
+}

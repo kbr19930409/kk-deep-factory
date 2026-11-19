@@ -1,0 +1,248 @@
+{
+  "cross_page_contract": {
+    "example_ids": {
+      "project_id": "PRJ-MY-FACTORY-DEMO",
+      "incident_id": "SS-001",
+      "business_task_id": "TASK-SS-001"
+    }
+  },
+  "demo_dataset": {
+    "equipment": {
+      "equipment_id": "MC-07",
+      "display_name": "MC-07 加工中心",
+      "line_id": "LINE-MCH-01",
+      "product_id": "P-A",
+      "operation_id": "OP20",
+      "ideal_cycle_version": "CYCLE-01",
+      "ideal_cycle_minutes": 0.5
+    },
+    "date_and_windows": {
+      "example_date": "2026-11-16",
+      "timezone": "Asia/Shanghai",
+      "problem_window": "09:30–10:00",
+      "maintenance_and_acceptance_window": "10:00–10:30",
+      "recovery_observation_window": "10:30–11:00",
+      "display_policy": "四页面共享两个明确的30分钟指标窗口，默认显示问题窗口；观察完成后可切换对照。不得将两窗口与完整班次值混排。",
+      "maintenance_accounting": "10:00–10:30是单独保存的合成停机/处置记录；若按09:30–11:00或全班重新核算，必须按既定口径计入这段时间，不能因比较前后窗口而删掉维修损失。该30分钟不代表对真实维修工期的承诺。"
+    },
+    "thirty_minute_current": {
+      "evidence_id": "E-001",
+      "production_record_id": "P-001",
+      "metric_snapshot_id": "METRIC-001",
+      "window": "2026-11-16 09:30–10:00",
+      "T": 30,
+      "D": 0,
+      "R": 30,
+      "c": 0.5,
+      "N": 30,
+      "G": 29,
+      "short_stop_count": 18,
+      "short_stop_minutes": 12.6,
+      "other_performance_loss_minutes": 2.4,
+      "quality_loss_minutes": 0.5,
+      "A_pct": 100,
+      "P_pct": 50,
+      "Q_pct": 96.6666666667,
+      "OEE_pct": 48.3333333333,
+      "reconciliation": "30 = 合格理想时间14.5 + 质量损失0.5 + 短停12.6 + 其他性能损失2.4；短停不再扣入D。"
+    },
+    "thirty_minute_recovery": {
+      "evidence_id": "E-002",
+      "production_record_id": "P-002",
+      "metric_snapshot_id": "METRIC-002",
+      "window": "2026-11-16 10:30–11:00",
+      "T": 30,
+      "D": 0,
+      "R": 30,
+      "c": 0.5,
+      "N": 56,
+      "G": 55,
+      "short_stop_count": 2,
+      "short_stop_minutes": 1.2,
+      "other_performance_loss_minutes": 0.8,
+      "quality_loss_minutes": 0.5,
+      "A_pct": 100,
+      "P_pct": 93.3333333333,
+      "Q_pct": 98.2142857143,
+      "OEE_pct": 91.6666666667,
+      "reconciliation": "30 = 合格理想时间27.5 + 质量损失0.5 + 短停1.2 + 其他性能损失0.8。",
+      "comparison": {
+        "oee_change_pp": 43.3333333334,
+        "short_stop_count_change": -16,
+        "short_stop_minutes_change": -11.4,
+        "short_stop_duration_reduction_pct": 90.4761904762
+      },
+      "interpretation": "这只是同工况合成样例，展示观察机制，不保证真实系统达到相同改善；不能把全部效率变化直接归因于单次维修。"
+    },
+    "maintenance_segment": {
+      "record_id": "MAINT-001",
+      "equipment_id": "MC-07",
+      "work_order_id": "WO-001",
+      "start": "2026-11-16T10:00:00+08:00",
+      "end": "2026-11-16T10:30:00+08:00",
+      "duration_minutes": 30,
+      "classification": "维护处置时间独立记录，包含作业准备、维修、复核与验收；实际机台状态以现场信号为准",
+      "label": "演示合成记录，非工期承诺"
+    },
+    "recovery_short_stop_events": [
+      {
+        "id": "RECSTOP-01",
+        "start": "2026-11-16T10:40:00+08:00",
+        "end": "2026-11-16T10:40:36+08:00",
+        "duration_seconds": 36
+      },
+      {
+        "id": "RECSTOP-02",
+        "start": "2026-11-16T10:50:00+08:00",
+        "end": "2026-11-16T10:50:36+08:00",
+        "duration_seconds": 36
+      }
+    ],
+    "short_stop_events_in_first_window": [
+      {
+        "id": "STOP-01",
+        "duration_seconds": 42,
+        "end": "2026-11-16T09:31:42+08:00",
+        "source_evidence_id": "E-001",
+        "alarm_association": true,
+        "start": "2026-11-16T09:31:00+08:00"
+      },
+      {
+        "id": "STOP-02",
+        "duration_seconds": 42,
+        "end": "2026-11-16T09:33:12+08:00",
+        "source_evidence_id": "E-001",
+        "alarm_association": true,
+        "start": "2026-11-16T09:32:30+08:00"
+      },
+      {
+        "id": "STOP-03",
+        "duration_seconds": 42,
+        "end": "2026-11-16T09:34:42+08:00",
+        "source_evidence_id": "E-001",
+        "alarm_association": true,
+        "start": "2026-11-16T09:34:00+08:00"
+      },
+      {
+        "id": "STOP-04",
+        "duration_seconds": 42,
+        "end": "2026-11-16T09:36:12+08:00",
+        "source_evidence_id": "E-001",
+        "alarm_association": true,
+        "start": "2026-11-16T09:35:30+08:00"
+      },
+      {
+        "id": "STOP-05",
+        "duration_seconds": 42,
+        "end": "2026-11-16T09:37:42+08:00",
+        "source_evidence_id": "E-001",
+        "alarm_association": true,
+        "start": "2026-11-16T09:37:00+08:00"
+      },
+      {
+        "id": "STOP-06",
+        "duration_seconds": 42,
+        "end": "2026-11-16T09:39:12+08:00",
+        "source_evidence_id": "E-001",
+        "alarm_association": true,
+        "start": "2026-11-16T09:38:30+08:00"
+      },
+      {
+        "id": "STOP-07",
+        "duration_seconds": 42,
+        "end": "2026-11-16T09:40:42+08:00",
+        "source_evidence_id": "E-001",
+        "alarm_association": true,
+        "start": "2026-11-16T09:40:00+08:00"
+      },
+      {
+        "id": "STOP-08",
+        "duration_seconds": 42,
+        "end": "2026-11-16T09:42:12+08:00",
+        "source_evidence_id": "E-001",
+        "alarm_association": true,
+        "start": "2026-11-16T09:41:30+08:00"
+      },
+      {
+        "id": "STOP-09",
+        "duration_seconds": 42,
+        "end": "2026-11-16T09:43:42+08:00",
+        "source_evidence_id": "E-001",
+        "alarm_association": true,
+        "start": "2026-11-16T09:43:00+08:00"
+      },
+      {
+        "id": "STOP-10",
+        "duration_seconds": 42,
+        "end": "2026-11-16T09:45:12+08:00",
+        "source_evidence_id": "E-001",
+        "alarm_association": true,
+        "start": "2026-11-16T09:44:30+08:00"
+      },
+      {
+        "id": "STOP-11",
+        "duration_seconds": 42,
+        "end": "2026-11-16T09:46:42+08:00",
+        "source_evidence_id": "E-001",
+        "alarm_association": true,
+        "start": "2026-11-16T09:46:00+08:00"
+      },
+      {
+        "id": "STOP-12",
+        "duration_seconds": 42,
+        "end": "2026-11-16T09:48:12+08:00",
+        "source_evidence_id": "E-001",
+        "alarm_association": true,
+        "start": "2026-11-16T09:47:30+08:00"
+      },
+      {
+        "id": "STOP-13",
+        "duration_seconds": 42,
+        "end": "2026-11-16T09:49:42+08:00",
+        "source_evidence_id": "E-001",
+        "alarm_association": false,
+        "start": "2026-11-16T09:49:00+08:00"
+      },
+      {
+        "id": "STOP-14",
+        "duration_seconds": 42,
+        "end": "2026-11-16T09:51:12+08:00",
+        "source_evidence_id": "E-001",
+        "alarm_association": false,
+        "start": "2026-11-16T09:50:30+08:00"
+      },
+      {
+        "id": "STOP-15",
+        "duration_seconds": 42,
+        "end": "2026-11-16T09:52:42+08:00",
+        "source_evidence_id": "E-001",
+        "alarm_association": false,
+        "start": "2026-11-16T09:52:00+08:00"
+      },
+      {
+        "id": "STOP-16",
+        "duration_seconds": 42,
+        "end": "2026-11-16T09:54:12+08:00",
+        "source_evidence_id": "E-001",
+        "alarm_association": false,
+        "start": "2026-11-16T09:53:30+08:00"
+      },
+      {
+        "id": "STOP-17",
+        "duration_seconds": 42,
+        "end": "2026-11-16T09:55:42+08:00",
+        "source_evidence_id": "E-001",
+        "alarm_association": false,
+        "start": "2026-11-16T09:55:00+08:00"
+      },
+      {
+        "id": "STOP-18",
+        "duration_seconds": 42,
+        "end": "2026-11-16T09:57:12+08:00",
+        "source_evidence_id": "E-001",
+        "alarm_association": false,
+        "start": "2026-11-16T09:56:30+08:00"
+      }
+    ]
+  }
+}
