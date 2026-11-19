@@ -1,0 +1,26 @@
+{
+  "format": 1,
+  "title": "kk-deep-factory",
+  "plugins": [
+    {
+      "name": "kk-deep-factory",
+      "title": "kk-deep-factory",
+      "description": {
+        "en": "A 3D factory workspace for analyzing equipment effectiveness, investigating repeated stops and coordinating maintenance work orders through AI coworkers.",
+        "zh": "三维车间、设备 OEE 与维修工单。向工厂总管描述设备异常，由 AI 同事协作分析、制定方案并跟踪处理。"
+      },
+      "author": "kbr19930409",
+      "homepage": "https://github.com/kbr19930409/kk-deep-factory",
+      "repository": {"url": "https://github.com/kbr19930409/kk-deep-factory"},
+      "icon": "https://raw.githubusercontent.com/kbr19930409/kk-deep-factory/ca9d8d330aa8a5f1dacd8a34b4af4485362e6308/icon.svg",
+      "versions": [
+        {
+          "version": "0.3.0",
+          "publishTimestamp": 1795069458,
+          "source": {"type": "git", "url": "https://github.com/kbr19930409/kk-deep-factory", "commit": "ca9d8d330aa8a5f1dacd8a34b4af4485362e6308"},
+          "engines": {"dsh": ">=0.2.2-alpha.2 <0.2.3-0"}
+        }
+      ]
+    }
+  ]
+}
