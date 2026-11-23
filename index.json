@@ -19,6 +19,12 @@
           "publishTimestamp": 1795069458,
           "source": {"type": "git", "url": "https://github.com/kbr19930409/kk-deep-factory", "commit": "ca9d8d330aa8a5f1dacd8a34b4af4485362e6308"},
           "engines": {"dsh": ">=0.2.2-alpha.2 <0.2.3-0"}
+        },
+        {
+          "version": "0.3.1",
+          "publishTimestamp": 1795425551,
+          "source": {"type": "git", "url": "https://github.com/kbr19930409/kk-deep-factory", "commit": "e549a5d88d2531927ed79635708851a5b6548772"},
+          "engines": {"dsh": ">=0.2.2-alpha.2 <0.2.3-0"}
         }
       ]
     }
