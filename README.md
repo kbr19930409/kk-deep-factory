@@ -23,3 +23,7 @@ dsh plugin --profile web add https://github.com/kbr19930409/kk-deep-factory.git
 工单和聊天记录按安装环境保存于 `<DSH 配置档>/data/kk-deep-factory/factory.sqlite`。可在宿主环境设置 `KK_DEEP_FACTORY_DATA_DIR` 指定独立的绝对目录，用 `FACTORY_PYTHON` 指定 Python 解释器。升级后沿用同一数据目录即可继续使用已有记录。
 
 宿主面板面向当前工作区所有者。三维界面使用 Three.js，随包附有 [Three.js 版权和许可](THIRD-PARTY-NOTICES/Three.js-MIT.txt)。
+
+## License
+
+本项目采用 MIT 许可证，见 [LICENSE](LICENSE)。
