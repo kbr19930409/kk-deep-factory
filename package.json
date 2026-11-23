@@ -47,7 +47,7 @@
     "OEE",
     "work-orders"
   ],
-  "license": "UNLICENSED",
+  "license": "MIT",
   "icon": "./icon.svg",
   "engines": {
     "node": ">=24.9.0",
